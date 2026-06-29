@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Inicio.css";
+import { Link } from "react-router-dom";
 
 const Inicio = () => {
   const [slideAtual, setSlideAtual] = useState(0);
@@ -7,10 +8,10 @@ const Inicio = () => {
   const [mostrarPopup, setMostrarPopup] = useState(false);
 
   const imagensCarrossel = [
-    "/imagem/segunda-guerra.jpg",
-    "/imagem/revolucao-francesa.jpg",
-    "/imagem/adao.png",
-    "/imagem/astronauta-carrossel.jpg",
+    "/imagem/segunda-guerra.png",
+    "/imagem/revolucao-francesa.png",
+    "/imagem/adao2.png",
+    "/imagem/astronauta-carrossel.png",
     "/imagem/filosofia.png",
   ];
 
@@ -30,6 +31,7 @@ const Inicio = () => {
       localStorage.removeItem("mostrarPopup");
     }
   }, []);
+
 
   return (
     <>
@@ -55,7 +57,7 @@ const Inicio = () => {
           <li>
             <a href="/inicio">
               <img
-                src="/imagem/casadomine.webp"
+                src="/imagem/casadomine.png"
                 alt="Início"
                 style={{ width: "70px" }}
               />
@@ -83,13 +85,13 @@ const Inicio = () => {
           </li>
 
           <li>
-            <a href="/sobre">
+            <Link to="/sobre">
               <img
-                src="/imagem/interrogacao.jpg"
+                src="/imagem/interrogacao.png"
                 alt="Sobre"
                 style={{ width: "30px" }}
               />
-            </a>
+          </Link>
           </li>
         </ul>
       </div>
@@ -116,11 +118,7 @@ const Inicio = () => {
         </div>
       </div>
 
-      <img
-        src="/imagem/astronauta.png"
-        alt="Astronauta"
-        className="astronauta"
-      />
+
 
       <div className="cards-container">
         <a href="/questionario4" className="card">
@@ -133,13 +131,13 @@ const Inicio = () => {
 
         <a href="/questionario2" className="card">
           <h3>Império Romano</h3>
-          <img src="/imagem/juliocesar.jfif" alt="Império Romano" />
+          <img src="/imagem/juliocesar.png" alt="Império Romano" />
         </a>
 
         <a href="/questionario5" className="card">
           <h3>Segunda Guerra Mundial</h3>
           <img
-            src="/imagem/segunda-guerra.jpg"
+            src="/imagem/segunda-guerra.png"
             alt="Segunda Guerra Mundial"
           />
         </a>
